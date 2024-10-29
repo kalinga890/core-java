@@ -4,14 +4,20 @@ public class Parameters{
 		
 		foodorder("chicken");
 		foodorder("cake");
-		foodorder("mutton");
 
 		companyinformation("microsoft", "i am excited to work this comapny" );
+		hospitalinformation("balaji hospital", 4.9d, 583122, 1234123412,0.4f);
+		hostel("prajwal", 200, "everyday clean the rooms", "dosa",300 );
+		marketingrate("brinjal", 100, "purpal" );
+		foodorder("mutton");
+
+		hospitalinformation("governament hospital",4.5d,583227, 1111111111, 0.5f );
+		
 		companyinformation("ibm", "i rejected to this campany due to lowsalary");
 
-		marketingrate("brinjal", 100, "purpal" );
 
-		hostel("prajwal", 200, "everyday clean the rooms", "dosa" );
+
+
 	}
 
 
@@ -36,13 +42,23 @@ public class Parameters{
 
 	
 
-	public static void hostel(String name, int Number,String messege,String food){
+	public static void hostel(String name, int number,String messege,String food, int student){
 		System.out.println("hostel warden name is " + name);
-		System.out.println("Total obc number is " + Number);
+		System.out.println("Total obc number is " + number);
 		System.out.println("Messege is " + messege);
 		System.out.println("my fovarite food is " + food);
+		System.out.println("total number of engineering student is " + student);
+
+			
 		
+	}
+	public static void hospitalinformation(String name,double rating,long pincode, int number, float percentage){
+		System.out.println("hospital name is " + name);
+		System.out.println("hospital rating is " + rating);
+		System.out.println("hospital pincode is " + pincode);
+		System.out.println("hospital helpline number " + number);
+		System.out.println("hospital patient percentage " + percentage);
 		
-		
+
 	}
 }
