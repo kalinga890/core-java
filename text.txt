@@ -1,0 +1,266 @@
+1) the variables contain store the values 
+
+ex int marks = 50;
+
+int = data types
+marks = variable name
+50 = is the value
+
+2)data types in java 
+they are two types in java 
+1)primitive
+2)non primitive data types 
+
+examples 
+
+byte marks = 30;
+
+short villageNumbers = 300;
+
+int noofbooks = 50000;
+
+long population = 1212234;
+
+float percentage = 40.3f;
+
+double atomicmass = 1666.566d;
+
+String name = "kalinga" ;
+
+char firstletter = 'A';
+
+Boolean javaiseasy = false;
+
+
+3) primitive data type is pre defined data types 
+   
+ex int marks = 60;
+
+non primitive data type is user defined data types 
+ex int[] marks = {10,20,30,40,50}
+
+
+4) 10.0
+
+5) 0
+
+
+Method in java 
+
+1) the method is block of code which is executed whenever it is called 
+
+purpose of method in java : reusability of code 
+
+2) public static int void add(int a, int b){
+
+int c = a + b;
+
+return c;
+
+}
+
+main method 
+
+public static void main (String[] args){
+
+     int result = add(10,20)
+     system.out.println(result);
+}
+
+3) if use void in method not return value 
+
+ex  public static void calling(){
+    
+  system.out.println( " calling to abhi");
+
+
+if use without void u don't write return value because in method used to specific data types like byte, int , short, string 
+
+examples 
+
+public static int void add(int a, int b){
+
+
+int c = a + b;
+
+return c;
+}
+
+main method 
+
+public static void main (String[] args){
+
+     int result = add(10,20)
+
+     system.out.println(result);
+}
+
+
+4) 20
+
+5) method overloading is a multiple method name is having same but difference in parameter 
+
+they are 3 types in difference in parameter 
+
+1) increase the no of parameter 
+2) changing the parameter 
+3) order of parameter 
+
+examples 
+
+public static int  add(int a, int b){
+
+int c =  a + b;
+
+return c;
+
+public static int  add(int a, int b, int c){
+
+int c =  a + b + c;
+
+return c;
+
+
+public static int  add(int a, int b, int c,  int d){
+
+int c =  a + b + c + d;
+
+return c;
+
+
+6) get the error initialize the return value
+
+
+Parameter in java
+
+1) the parameter is a variables and inialize the values inside the method bracket 
+
+which is executed whenever it is called 
+
+why are there used in method : reduced the code  the code 
+
+2)
+
+3) no
+
+4) 
+
+5) 
+
+
+Arrays in java 
+
+1) arrays defined as a collection of values which is similar in data types is called arrays
+
+normal variables  store single values  int score = 50;
+
+arrays variables store multiple values in single variables 
+
+
+2) arrays initialize and declarations 
+
+int[] arrays = { 10, 20, 30, 40, 50,60};
+
+arrays[2] = 30;
+
+system.out.println(arrays[i]);
+
+
+
+3) maximum integer array program
+
+
+int[] arrays = {10,20,30,40,50,60,70,80,90};
+
+for(int i = 9; i=<0; i++){
+
+system.out.println(array[i]);
+
+}
+
+
+4) 3
+
+5) int[] score = { 10,20,30,40,50,60,70,80,90};
+
+for(int i = 9; i=<0; i--){
+
+system.out.println(score[i]);
+
+}
+
+
+
+5) public static int sumofArrays(int[] arrays){
+
+int total = 0;
+
+for(int i = 0; i<array.length; i++){
+ 
+total = total + array[i];
+
+}
+
+return total;
+
+}
+
+main method 
+
+public static void main (String[] args){
+
+
+int[] arr = {10.20,30,40,50,60,70,80,90};
+
+      int result = sumofArrays(arrays);
+  
+  
+system.out.println(result);
+
+
+
+find the the output 
+
+
+1)8
+2)  1,3,5,8,12
+
+3) 8, 8
+
+4)  4
+
+
+
+      
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
