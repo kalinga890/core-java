@@ -1,0 +1,316 @@
+1) class means : blue print of the object 
+   object means : object has a state and bheviour 
+
+for example : Animal 
+
+state : eyes , legs,skin 
+bhevoiur : Moving , eating 
+
+ here Animal is class 
+
+2) Constructor : is the special method , and block of code which is excuted whenever object is created 
+
+constructor name is always same with class name 
+
+constructor dont have return type
+
+ex public mopving(){
+
+}
+
+Method : is a block of code which is excuted whenever it is called 
+
+ex : public static void moving(){
+
+}
+
+3) they are 3 types in constructor 
+
+*) default constructor :  default constructor is type of constructor you dont provide any parameter , defaulty automaticaly compiter give 
+
+ex public Moving(){
+
+}
+
+*) No parameter constructor :  No parameter constructor is type of constructor you dont provide any arguments 
+
+ex public Moving (){
+
+system.out.println("Car is moving ");
+
+
+}
+
+ *) Parameter constructor : is type of constructor you provide arguments 
+
+ex public Car (String name, int price){
+
+system.out.println("Car is moving ");
+
+
+}
+
+4) Can a constructor be private? If yes, when would you use it? : if constructor is same class then you used private 
+
+5) Aggregation means Has a relational ship  and is one types of inherirance
+
+for example : Car contain engine , break, tyers, mirror , sheets
+
+car has a engine 
+car has a break
+car has a tyers
+car has a mirror
+car has a sheets
+
+
+public class Car {
+
+public Engine engine;
+
+public Break break;
+
+public Tyers tyers;
+
+public Mirror mirror;
+
+pblic Sheets sheets;
+
+
+each object contain separate class 
+
+
+6) inheritance is a one of fundamental of oops Method 
+
+inheritance define has : acquire  all properties  from parent class 
+ 
+Why is it used? : because of code reusability and less code provide clear strature of code 
+
+
+7) they are 3 types in  inheritance 
+
+*) single inheritance 
+*) multilevel  inheritance
+ 
+*) hierarchical inheritance
+
+
+8 ) super keyword used to access to data or method or variables 
+
+9) Why doesn't Java support multiple inheritance with classes?
+
+ because of two parent class and one child class , if child class access or inherit only one parent class not both parent class that's why not  multiple inheritance support   to java 
+
+* multiple inheritance achieve only interface through only
+
+10) What is a static variable in Java? How is it different from an instance variable?
+
+ * static variables means single copy 
+* static variable access through reference class name 
+
+
+* instance variables means non static method 
+* instance variables access through only object reference  
+
+ 11) Where and how is a static variable stored in memory? 
+
+static variables store in instance memory
+
+public class Car{
+ex : static String brand;
+     static String foundername;
+
+
+}
+
+12) What is a static block in Java? When is it executed?
+
+static block means block of code and contain static variables and methods
+
+static block is executed  before the main method
+
+13) Can a class have multiple static blocks? How are they executed? 
+
+class have multiple static block which is executed one by one static block 
+
+14) What is the main use case of a static block?
+
+because of inializing the variables 
+
+15 ) Why main method is static in java 
+
+because of static method is executed reference through class name  and directly go through the jvm and without creating instance object
+
+
+
+1) 
+class Test {
+    int num = 5;
+
+    void modify(Test obj) {
+        obj.num += 10;
+    }
+
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        t1.modify(t1);
+        System.out.println("Value: " + t1.num);
+    }
+}
+
+output : 15
+
+
+2) 
+class Example {
+    int a;
+
+    Example() {
+        this(100);
+        System.out.println("Default Constructor");
+    }
+
+    Example(int x) {
+        a = x;
+        System.out.println("Parameterized Constructor: " + a);
+    }
+
+    public static void main(String[] args) {
+        Example e = new Example();
+    }
+}
+
+
+ouput : default constructor
+
+
+3) 
+class CPU {
+    int cores = 4;
+}
+
+class Computer {
+    CPU cpu = new CPU();
+
+    void showSpecs() {
+        System.out.println("Cores: " + cpu.cores);
+    }
+
+    public static void main(String[] args) {
+        Computer c1 = new Computer();
+        Computer c2 = new Computer();
+        c1.cpu.cores = 8;
+        c1.showSpecs();
+        c2.showSpecs();
+    }
+}
+
+out put : 8, 4
+
+4) 
+class Alpha {
+    private int x = 10;
+    protected int y = 20;
+
+    int getX() {
+        return x;
+    }
+}
+
+public class Beta extends Alpha {
+    public static void main(String[] args) {
+        Beta b = new Beta();
+        // System.out.println(b.x); // Not allowed
+        System.out.println(b.getX());
+        System.out.println(b.y);
+    }
+}
+
+output : 10, 20
+
+
+5 ) 
+class Parent {
+    static void show() {
+        System.out.println("Parent static");
+    }
+}
+
+class Child extends Parent {
+    static void show() {
+        System.out.println("Child static");
+    }
+
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.show();
+    }
+}
+
+output : Parent static
+
+6) 
+class Counter {
+    static int count = 0;
+
+    Counter() {
+        count++;
+    }
+
+    public static void main(String[] args) {
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+        System.out.println(Counter.count);
+    }
+}
+
+output : 3 
+
+
+7) 
+
+
+class Init {
+    static int val;
+
+    static {
+        val = 50;
+        System.out.println("Static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Value: " + val);
+    }
+}
+
+output : 50
+
+8) 
+class Animal {
+    void move() {
+        System.out.println("Animal moves");
+    }
+}
+
+class Dog extends Animal {
+    void move() {
+        System.out.println("Dog runs");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.move();
+    }
+
+
+ouput : Dog run
+
+
+
+
+
+
+
+ 
